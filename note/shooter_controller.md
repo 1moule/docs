@@ -7,10 +7,6 @@
 3. 2pi/push_per_rotation就是拨出一颗蛋转的角度
 4. ctrl_trigger.setcommand()就是用控制器控制trigger的位置，应该是为了消除累积的位置误差
 
-## 2. power_limit()
-
-1. 
-
 ## 3. push()
 
 1. (time-last_shoot_time).toSec() >= 1. / cmd_.hz

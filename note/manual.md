@@ -3,8 +3,30 @@
 ### 1. main.cpp
 
 1. 定义了这个节点的主函数，这个节点的运行实际是循环运行一个run函数，run函数是写在manual_base.h中的一个虚函数
+2. main函数中会根据robot type的不同，然后调用不同的run，
+   - 步兵：chassi_gimble_shooter_cover_manual
+   - 英雄：chassis_gimble_shooter_manual
+   - 工程：engineer_manual
 
-### 2.  manual_base.cpp
+## 2. 代码结构
+
+### 1. manual
+
+- chassi_gimble_shooter_cover_manual继承chassi_gimble_shooter_manual
+- chassi_gimble_shooter_manual继承chassi_gimble_manual
+- chassis_gimble_manual继承manual_base
+
+
+
+- dart_manual继承manual_base
+- engineer_manual继承chassi_gimble_manual
+
+### 2. 英雄manual为例，详解
+
+1. 大部分为manual_base中声明的虚函数
+2. 其余为写键位，本质是改变msg的内容，然后通过sendCommand发布到话题上
+
+## 2.  manual_base
 
 1. run()：
    - 从串口读取裁判系统的数据并放到buffer中
@@ -18,13 +40,16 @@
 
 3. updateRc()
 
-- 检查left switch的状态，同样通过update()，（update定义在input_event.h）
+- manual_base中的，只检查left switch的状态，同样通过update()，（update定义在input_event.h）
 
 4. updatePc()
 
-- checkkeyboard()
+- checkkeyboard()，检查键盘
 
-### 3. input_event.h
+5. sendCommand()，调用commandsender的sendcommand，向话题发布消息
+6. robotDie()，如果遥控开启，把所有控制器stop
+
+## 3. input_event.h
 
 1. boost::function<>：
 
@@ -66,3 +91,18 @@ int main()
     
   //改变占位符的位置，可以改变他们传到add中作为参数时的位置
 ```
+
+
+
+## 2. 写键位method
+
+### 1. 流程
+
+1. 在头文件中定义Inputevent类型变量
+2. 在构造函数中调用变量的setfalling、setrising之类的函数，这个决定了在什么情况下会调用这个键位的函数
+   - setRising：刚按下那一刻调用一次
+   - setFalling：刚松开时调用一次
+   - setActiveHigh：在持续按住的过程中一直调用
+   - setActiveLow：在持续松开时一直调用
+3. checkKeyboard()：调用变量的update函数
+4. 剩下的就是按键函数的逻辑

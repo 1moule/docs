@@ -8,35 +8,53 @@
 ~$ ssh dynamicx@ip
 ```
 
-2. 运行以下launch
+2. 关闭自启
+
+```
+~$ sudo systemctl stop rm_start.service start_master.service
+```
+
+3. 运行roscore以及以下launch
 
 ```
 mon launch rm_config rm_hw.launch //打开硬件接口
 mon launch rm_config load_controller.launch  //加载控制器
 ```
 
-3. 打开rqt运行控制器
+4. 打开rqt运行控制器
 
 - plugin -> robot_tool -> controller_manager
 
   - 开启robot state controller（发布、维护tf）joint state controller（可以听到joint state，包括关节的effort velocity position）
 
-  - 开启拨盘校准控制器（开shooter前一定要校准！！！）
+  - 开启拨盘校准控制器（开shooter前一定要校准！！！并且一定要保证校准成功，即卡到机械限位）
 
   - 开启shooter controller
 
 - plugin -> Topics -> Message Publisher
   - 在上方选中话题，/controller/shooter_controller/command，点+号
-  - 点开话题，mode 1为stop、2为ready、3为push；speed的值对应的弹速从rm_control/rm_msg/Shootmsg查看；hz为拨盘拨的频率
+  - 点开话题，mode：1为stop、2为ready、3为push；speed的值对应的弹速从rm_control/rm_msg/Shootmsg查看（要根据当前机器人的射速上限选对应的speed，并且参数文件中也要有对应射速的摩擦轮转速）；hz为拨盘拨的频率
   - 注意：一定先进ready再进push，这样urdf中设置的拨盘offset才会生效
 
 ## 2. method 2(manual)
 
 1. 连接nuc
 1. 停掉自启
-1. 
+1. 运行roscore以及以下launch
 
-# 2. 注意问题
+```
+mon launch rm_bringup start.launch
+```
+
+4. 开启遥控器，右上角拨杆拨到中间(遥控器操作)，或拨到最上(使用键鼠)；左拨杆拨到中间(进ready)，再拨到最上(进push)
+
+## 3. 注意
+
+1. 要把自己电脑上的.bashrc里，ROS_MASTER_URI改成对应的nuc的ip，修改后要重新开终端或source .bashrc；因为rqt，plotjuggler这些工具是在自己的电脑上运行的，他们通过网络跟nuc通信，而master url指定了数据从哪里获取
+
+# 2. 注意问题（影响重复度的因素）
+
+## 1. 非控制部分
 
 1. 摩擦轮磨损
 
@@ -73,3 +91,7 @@ mon launch rm_config load_controller.launch  //加载控制器
 - 可以通过把底盘架起来，然后关掉orientation controller，这样用的就是底盘的数据，follow的时候底盘不会动，然后云台会follow过去；如果开了这个控制器，那就是用imu的数据，云台yaw动了之后，是底盘会follow过去
 
 8. 撞枪管
+
+## 2. 控制部分
+
+1. 调整拨盘offset来改变弹丸初始位置，要求调到他不卡弹、不双发

@@ -25,7 +25,7 @@ mon launch rm_config load_controllers.launch
 
 1. 打开rqt后，运行plugin，终端显示无法加载
 
-solution：在.bashrc复制粘贴阵雨哥发过来的那个.bashrc里面的ros那一段，然后根据nuc的ip修改ROS_MASTER_URI，因为这些工具是通过网络连接的，
+solution：在.bashrc复制粘贴阵雨哥发过来的那个.bashrc里面的ros那一段，然后根据nuc的ip修改ROS_MASTER_URI，因为这些工具是通过网络连接的，要通过master_uri连接的指定的master，然后获得数据
 
 2. rqt中打开shooter_controller，改变mode的值，发现没有反应
 

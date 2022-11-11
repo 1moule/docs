@@ -27,7 +27,7 @@
 6. burst()：如果超级电容的power大于一个阈值，
 
    （1）小陀螺模式：limit_power_等于主控上设置的功率限制+extra_power（hero的是30）；
-   （2）else：等于主控设置的功率限制
+   （2）else：等于burst_power（参数文件中设置）
 
 7. normal()：等于主控上设置的功率限制
 

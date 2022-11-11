@@ -51,9 +51,12 @@ vim ~/.bashrc
    sudo apt-get install ros-noetic-rslidar-sdk
     (2)最后pointcloud2显示出了激光雷达，laserscan也有，因为smb那个包里面有pointcloud_to_laserscan
     大功告成！！！！
-
 8. **clion显示not found “ros/ros.h”**
     #因为没有写cmakelist，加上：add_executable(功能包名 src/.cpp文件)
-
 9. **解压tar.gz格式的压缩包**
    命令行：tar -zxvf xxx.tar.gz
+10. 删除当前目录下的所有内容
+   sudo rm -rf *
+11. clion左侧边，显示commit标签
+
+ `setting` => `Version Control` => `Commit` => `Use non-modal commit interface`
