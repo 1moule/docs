@@ -29,7 +29,7 @@
    （1）小陀螺模式：limit_power_等于主控上设置的功率限制+extra_power（hero的是30）；
    （2）else：等于burst_power（参数文件中设置）
 
-7. normal()：等于主控上设置的功率限制
+7. normal()：等于主控上设置的功率限制加上(缓冲能量*power_gain_)
 
 8. charge()：等于主控上的功率限制*0.85
 

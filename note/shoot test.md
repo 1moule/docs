@@ -2,26 +2,32 @@
 
 ## 1. method 1(rqt)
 
-1. 连接nuc
+1. 上网关查看nuc的ip
+
+```
+浏览器输入网址：192.168.1.1，找到机器人对应的主机名的ip
+```
+
+2. 连接nuc
 
 ```
 ~$ ssh dynamicx@ip
 ```
 
-2. 关闭自启
+3. 关闭自启
 
 ```
 ~$ sudo systemctl stop rm_start.service start_master.service
 ```
 
-3. 运行roscore以及以下launch
+4. 运行roscore以及以下launch
 
 ```
 mon launch rm_config rm_hw.launch //打开硬件接口
 mon launch rm_config load_controller.launch  //加载控制器
 ```
 
-4. 打开rqt运行控制器
+5. 打开rqt运行控制器
 
 - plugin -> robot_tool -> controller_manager
 

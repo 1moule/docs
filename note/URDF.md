@@ -85,6 +85,27 @@ eg：<xacro:propetry name="wheel_radius" value=0.1 />；
 
 ##  ![](/home/chen/Pictures/2022-04-06 12-44-15 的屏幕截图.png)
 
+1. about tag "<safety_controller>"
+
+   - eg：
+
+   ```xml
+   <safety_controller k_velocity="0.1"
+                      k_position="100"
+                      soft_lower_limit="${pitch_lower_limit+threshold}"
+                      soft_upper_limit="${pitch_upper_limit-threshold}"/>
+   ```
+
+   - limit标签下的velocity是关节速度的限制，是通过控制力矩的指令来强制执行的，当关节速度越接近limit，那么扭矩会越来越小，如果joint超过了这个速度，会有一个反向的扭矩；
+
+     k_velocity决定了力矩受到的限制的大小(类似p控制器)
+     公式如下：施加在关节上的力矩 = -k_velocity * (v_real - v_limit)
+
+   - 同理：
+     越接近软限位速度越小，超过软限位会有一个反向的关节速度指令
+     k_position决定关节速度的限制(也是类似p控制器)
+     公式如下：关节的速度 = -k_position * (p_real - soft_upper_limit)
+
 ## 5. note of rm_description
 
 1. <xacro:arg />：定义一个变量
@@ -112,3 +133,5 @@ eg：<xacro:propetry name="wheel_radius" value=0.1 />；
 
    - 如果没有设置offset，开校准控制器校准后，电机会转到一个位置卡住，然后把那个位置设为零点
    - 如果有这个offset，那么会把原本的零点加上一个offset后的位置设置为新的零点
+
+**Transmission决定了关节和执行器的映射关系**

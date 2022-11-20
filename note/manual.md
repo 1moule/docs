@@ -13,13 +13,10 @@
 ### 1. manual
 
 - chassi_gimble_shooter_cover_manual继承chassi_gimble_shooter_manual
-- chassi_gimble_shooter_manual继承chassi_gimble_manual
-- chassis_gimble_manual继承manual_base
+- chassi_gimble_shooter_manual、engineer_manual继承chassi_gimble_manual
+- chassis_gimble_manual、dart_manual继承manual_base
 
 
-
-- dart_manual继承manual_base
-- engineer_manual继承chassi_gimble_manual
 
 ### 2. 英雄manual为例，详解
 
@@ -33,6 +30,8 @@
    - 从buffer读取裁判系统的数据
    - checkReferee() 检查裁判系统，实际是检查机器人血量
    - checkSwitch()：先检查遥控器开还是关并执行对应函数，然后检查right_switch的状态，然后根据state_是RC还是PC，执行对应的函数
+   - sendCommand：发送指令(将msg发布到topic)
+   - controller_manager_.update()：更新controller manager，会根据情况开启/关闭相应的控制器
 2. checkSwitch()
 
 - remoteControlTurnOff()：stop main controllers and calibration controllers，main controllers是一个vector容器，容器中有所有主要的控制器，这个函数会把这些控制器停掉；校准控制器也停掉
