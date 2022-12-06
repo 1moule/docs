@@ -13,14 +13,13 @@
 
 toSec()是把单位转换成秒；cmd.hz是rqt设的发射频率，倒数就是发射的周期（两次发射间的时间间隔）
 
-2. ```
-   ctrl_trigger_.setCommand(ctrl_trigger_.command_struct_.position_ -
-                            2. * M_PI / static_cast<double>(push_per_rotation_));
+2. ```c++
+   ctrl_trigger_.setCommand(ctrl_trigger_.command_struct_.position_ - 2. * M_PI / static_cast<double>(push_per_rotation_));
+                            
+   //让trigger电机逆时针转一个拨差（拨一颗子弹所需转动的角度，也就是一个拨差）
+   
+   //setcommand()之后，会把这个command存到.command_struct_.position_
    ```
-
-让trigger往回转（拨一颗子弹所需转动的角度）
-
-setcommand()之后，会把这个command存到.command_struct_.position_
 
 ## 4. block()
 

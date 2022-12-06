@@ -4,9 +4,8 @@
 
 1. 上网关查看nuc的ip
 
-```
-浏览器输入网址：192.168.1.1，找到机器人对应的主机名的ip
-```
+- 浏览器输入网址：192.168.1.1，找到机器人对应的主机名的ip
+- 网关帐号密码都是admin
 
 2. 连接nuc
 
@@ -54,9 +53,75 @@ mon launch rm_bringup start.launch
 
 4. 开启遥控器，右上角拨杆拨到中间(遥控器操作)，或拨到最上(使用键鼠)；左拨杆拨到中间(进ready)，再拨到最上(进push)
 
-## 3. 注意
+## 3. 使用自己的电脑测发射
 
-1. 要把自己电脑上的.bashrc里，ROS_MASTER_URI改成对应的nuc的ip，修改后要重新开终端或source .bashrc；因为rqt，plotjuggler这些工具是在自己的电脑上运行的，他们通过网络跟nuc通信，而master url指定了数据从哪里获取
+1. 注释.bashrc以下一行
+
+```
+export ROS_MASTER_URI=http://192.168.1.101:11311
+```
+
+2. 在.bashrc中添加环境变量
+
+```
+export ROBOT_TYPE=hero（机器人类型）
+```
+
+3. 关闭所有终端
+4. 打开第一个终端
+
+```
+roscore
+```
+
+5. 第二个终端
+
+```
+mon launch rm_config rm_hw.launch
+```
+
+- 使用manual
+
+  - 第三个终端
+
+  ```
+  mon launch rm_config manual.launch
+  ```
+
+  - 第四个终端
+
+  ```
+  mon launch rm_dbus rm_dbus
+  ```
+
+- 使用rqt
+
+  - 第三个终端
+
+  ```
+  mon launch rm_config load_controller.launch
+  ```
+
+  - 第四个终端
+
+  ```
+  rqt
+  ```
+
+6. 再开一个终端
+
+```
+rosrun plotjuggler plotjuggler
+```
+
+- 听/controller/shooter_controller/state/trigger/set_point、process_value，观察拨盘曲线
+- 听/joint_state/left_friction_wheel/velocity、/joint_state/right_friction_wheel/velocity，观察摩擦轮掉速
+
+## 4. 注意
+
+1. 使用nuc时，要把自己电脑上的.bashrc里，ROS_MASTER_URI改成对应的nuc的ip，修改后要重新开终端或source .bashrc；因为rqt，plotjuggler这些工具是在自己的电脑上运行的，他们通过网络跟nuc通信，而master url指定了数据从哪里获取
+2. 拨盘曲线每次基本一致，不超调、不过阻尼，基本紧贴期望曲线
+3. 每次发射两摩擦轮掉速差10rad/s以内；连续发射，单个摩擦轮掉速极差大概在30rad/s左右，应该是比较正常
 
 # 2. 注意问题（影响重复度的因素）
 
@@ -93,11 +158,32 @@ mon launch rm_bringup start.launch
 
 7. 云台移动
 
-- 英雄一定要校准imu，其他兵种可以不用
+- 英雄一定要标定imu，其他兵种可以不用
+- imu一定要做好零飘补偿（method：IMU零飘补偿.md）
 - 可以通过把底盘架起来，然后关掉orientation controller，这样用的就是底盘的数据，follow的时候底盘不会动，然后云台会follow过去；如果开了这个控制器，那就是用imu的数据，云台yaw动了之后，是底盘会follow过去
 
 8. 撞枪管
 
+- 对于17mm小弹丸，可以直接听声音判断
+- 对于42mm大弹丸，个人认为：在测速内壁贴一圈复写纸+白纸为较好的方法
+
+9. 温度
+
+- 一定要**预热！！！**
+- 空转温度上升幅度有限且速度较慢，可以套管发射，当射速波动大概稳定在一个值时，可以认为预热完成
+
+10. **机械安装问题**
+
+- **一定**要保证安装没有问题，精细到一个**垫片！！！**
+- 确保**定心**没有问题
+
 ## 2. 控制部分
 
 1. 调整拨盘offset来改变弹丸初始位置，要求调到他不卡弹、不双发
+1. 调拨盘pid，使其不超调，不过阻尼
+1. 摩擦轮掉速
+
+- 个人测试：
+  - 单个摩擦轮每次掉速波动大约在**30rad/s**
+  - 每次发射两个摩擦轮掉速大约差**10rad/s**
+

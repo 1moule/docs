@@ -46,51 +46,37 @@
 
 # 2. control_loop.cpp
 
-1. ```c++
-   RmRobotHWLoop(ros::NodeHandle& nh, std::shared_ptr<RmRobotHW> hardware_interface);
-   //RmRobotHWLoop这个类的构造函数，会创建controller_manager，设置一个频率，然后以这个频率调用update函数
-   ```
+1. 从参数服务器加载参数，包括循环频率、循环时间误差阈值、优先级
 
-2. ```c++
-   void RmRobotHWLoop::update()
-   //
-   ```
+2. 初始化硬件接口： 
+   - 从 rosparam 获取配置 
+   - 初始化硬件并将其与 ros_control 连接
+   
+3. 创建controller manager
 
+4. 获取一次当前时间戳，用于第一次的update
 
+5. 设置一个线程，用于循环
 
+   - ```
+       loop_thread_ = std::thread([&]() {
+         while (loop_running_)
+         {
+           if (loop_running_)
+             update();
+         }
+       })
+     ```
 
+   - update()
 
+     ```
+     
+     ```
 
+     
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+​	
 
 # 2. hardware_interface.cpp
 
