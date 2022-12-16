@@ -29,7 +29,7 @@ class Controller:public controller_interface::MultiInterfaceController<rm_contro
 }
 }
 
-//头文件一般写接口，这四个函数是控制器最基本的接口，必须要有，因为ros control中使用控制器的方法就是：加载控制器的时候调用一次init、开启控制器时调用staritinig、然后controller manager以1k hz的频率一直调用update、停止控制器调用stop
+//头文件一般写接口，写控制器要继承一个基类；这四个函数是控制器最基本的接口，必须要有，因为ros control中使用控制器的方法就是：加载控制器的时候调用一次init、开启控制器时调用staritinig、然后controller manager以1k hz的频率一直调用update、停止控制器调用stop
 ```
 
 4. 修改CmakeList.txt

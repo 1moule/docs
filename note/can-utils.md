@@ -63,6 +63,8 @@
 
 ![image-20220121013559152](/home/chen/Desktop/typora-user-image/image-20220121013559152.png)
 
+<mark>其实直接在apt装就行，缺依赖就从apt装</mark>
+
 ### 2. 关于使用can-utils时
 
 1. 使用can-utils要下载can-utils的源码（因为can-utils是开源代码）
