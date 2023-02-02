@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6c87b167-d30a-4f36-b569-eae499741a58" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/note/Adjust_chassis_power.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/DJI遥控校准.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/GM6020云台电机.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/IMU.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/IMU零飘补偿.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/Kill Gazebo.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/Linux下的can编程.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/PID控制器.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/URDF.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/Ubuntu20.04配置ssh.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/can-utils.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/can总线.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/chassis_controller.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/engineer_middleware.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/gimbal_controller.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/gpio_controller.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/manual.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/map_odom_baselink.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/orientation_controller.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/power_limit.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/rm_common.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/rm_dbus.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/rm_hw.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/robot_state_controller.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/ros control.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/shoot test.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/shooter_controller.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/socketcan.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/socketcan数据传输.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/study note.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/ubuntu20.04网线连接校园网.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/如何编写controller.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/宏.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/导航.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/底盘轮系的速度计算（全向轮）.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/底盘轮系的速度计算（舵轮）.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/底盘轮系的速度计算（麦克纳姆轮）.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/开发日常.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/手眼标定.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/控制器注册为插件.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/控制组学习清单.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/机器人比赛中常用的底盘轮系简介.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/气动发射.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/相机、imu联合标定.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/相机标定.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/编码器.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/自启.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/自瞄.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/踩坑日记.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2F7kcx1R7SpeW7kWDt5FwxDBGis" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/home/guanlin/docs"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6c87b167-d30a-4f36-b569-eae499741a58" name="Changes" comment="" />
+      <created>1663850592760</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663850592760</updated>
+      <workItem from="1663850593918" duration="12000" />
+      <workItem from="1663850657029" duration="224000" />
+      <workItem from="1663851853642" duration="42000" />
+      <workItem from="1663852010254" duration="109000" />
+      <workItem from="1668153665251" duration="690000" />
+      <workItem from="1668911377385" duration="52000" />
+      <workItem from="1670316893568" duration="433000" />
+      <workItem from="1671171590515" duration="86000" />
+      <workItem from="1675308940206" duration="1000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update some documentations.">
+      <created>1663850860118</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663850860118</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update some documentations.">
+      <created>1663852018038</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663852018038</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update some documentations.">
+      <created>1668153706925</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668153706925</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update some documentations.">
+      <created>1668911386465</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668911386465</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update some documentations.">
+      <created>1670316923946</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670316923946</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add some documentations.">
+      <created>1670317267944</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670317267944</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add some documentations and update some documentations.">
+      <created>1671171649859</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671171649859</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update some documentations." />
+    <MESSAGE value="Add some documentations." />
+    <MESSAGE value="Add some documentations and update some documentations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some documentations and update some documentations." />
+  </component>
+</project>
