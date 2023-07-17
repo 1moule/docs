@@ -1,7 +1,7 @@
 - **before_reading**：
-  - rate：
-  - track：
-  - direct：
+  - rate：按照一定速度转动
+  - track：自瞄
+  - direct：给一个点，瞄到那个点
 
 
 
@@ -31,7 +31,7 @@ geometry_msgs::TransformStamped类型的变量存储两个坐标系之间的tf�
    - 获取gimbal的command以及data_track
    - 获取tf转换关系
    - 给底盘法速度指令
-   - 根据不同状态执行不同的动作函数
+   - 根据不同状态执行不同的动作函数，目标点在这设置
    - movejoint
 
 2. ```
@@ -369,10 +369,10 @@ Eigen::Vector3d v_3d;
        
        output_pitch_ = std::atan2(temp_z, std::sqrt(std::pow(target_pos_.x, 2) + std::pow(target_pos_.y, 2)));
        //将目标点投影到xoy平面，与原点连线；通过求这条连线与目标点的z高度的反正切，可以得到pitch的角度0
-       //temp_z是视觉获取的目标点的z
+       //temp_z最开始是：从track拿到pos的z减去odom2pitch的z，也就是相对pitch的目标点的z；后面会根据每次迭代的结果，把z的误差叠加到这里
        
        target_rho = std::sqrt(std::pow(target_pos_.x, 2) + std::pow(target_pos_.y, 2));
-       //原点到目标投影点的距离
+       //pitch原点到目标投影点的距离
        
        double fly_time =
            (-std::log(1 - target_rho * resistance_coff_ / (bullet_speed_ * std::cos(output_pitch_)))) / resistance_coff_;
@@ -381,7 +381,7 @@ Eigen::Vector3d v_3d;
        double real_z = (bullet_speed_ * std::sin(output_pitch_) + (config_.g / resistance_coff_)) *
                            (1 - std::exp(-resistance_coff_ * fly_time)) / resistance_coff_ -
                        config_.g * fly_time / resistance_coff_;
-       //子弹发射之后，子弹真实能到的高度
+       //计算子弹发射之后，子弹真实能到的高度
    
        target_pos_.x = pos.x + vel.x * (config_.delay + fly_time);
        target_pos_.y = pos.y + vel.y * (config_.delay + fly_time);
@@ -405,7 +405,7 @@ Eigen::Vector3d v_3d;
    ```
    
 
-<img src="/home/chen/Desktop/typora-user-image/IMG_20220725_154624.jpg" alt="image" style="zoom: 25%;" />
+<img src="/home/guanlin/Desktop/typora-user-image/IMG_20220725_154624.jpg" alt="image" style="zoom: 25%;" />
 
 ​		（1）解算就是不断地修正target_pos和output_yaw、output_pitch，让error不断减小
 

@@ -7,7 +7,7 @@
 3. socketcan是can总线驱动的一种实现方式。（can总线驱动关联很多个can设备驱动，就大概是设备驱动组成了总线驱动）
 4. socketcan是一种特定架构can设备驱动。它让can设备驱动可以作为网络接口被调用。
 
-![image](/home/chen/Desktop/typora-user-image/image-20220119012120256.png)
+![image](/home/guanlin/Desktop/typora-user-image/image-20220119012120256.png)
 
 5. can设备应该是can控制器
 
@@ -28,7 +28,7 @@
 
 #### 	1. 字节流套接字（SOCK_STREAM）(面向连接的数据传输方式)
 
-![image](/home/chen/Desktop/typora-user-image/image-20220118173622965.png)
+![image](/home/guanlin/Desktop/typora-user-image/image-20220118173622965.png)
 
    1. 数据按什么顺序发送就按什么顺序被接收，例如：发送a-b-c，接收也是a-b-c，保证数据传输准确、可靠。如果数据损坏或者丢失，他会重新发送，所以准确性高但效率比较慢。
 
@@ -48,7 +48,7 @@
 
 #### 	2. 数据报套接字（SOCK_DGRAM）(无连接的数据传输方式)
 
-![image-20220118173239783](/home/chen/Desktop/typora-user-image/image-20220118173239783.png)
+![image-20220118173239783](/home/guanlin/Desktop/typora-user-image/image-20220118173239783.png)
 
 ​		1. 计算机不做数据的校验，如果传输的时候数据损坏或这丢失，不会重新发送，就是数据坏就坏了，不管，继续传。所以这种方式效率高（因为不用校验、重发），但是准确性低
 
