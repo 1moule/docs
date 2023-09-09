@@ -1,34 +1,49 @@
-## 1. 流程
+**before reading**
 
-### 1. main.cpp
-
-1. 定义了这个节点的主函数，这个节点的运行实际是循环运行一个run函数，run函数是写在manual_base.h中的一个虚函数
-2. main函数中会根据robot type的不同，然后调用不同的run，
+1. main.cpp中定义了这个节点的主函数，这个节点的运行实际是循环运行一个run函数，run函数是写在manual_base.h中的一个虚函数，子类中会重写这个函数
+2. main函数中会根据robot type的不同，构造不同的类，然后调用不同的run，
    - 步兵：chassi_gimble_shooter_cover_manual
    - 英雄：chassis_gimble_shooter_manual
    - 工程：engineer_manual
-
-## 2. 代码结构
-
-### 1. manual
-
-- chassi_gimble_shooter_cover_manual继承chassi_gimble_shooter_manual
-- chassi_gimble_shooter_manual、engineer_manual继承chassi_gimble_manual
-- chassis_gimble_manual、dart_manual继承manual_base
+   - 飞镖：dart_manual
+   - 平衡：balance_manual
 
 
 
-### 2. 英雄manual为例，详解
+## 1. 代码结构
 
-1. 大部分为manual_base中声明的虚函数
-2. 其余为写键位，本质是改变msg的内容，然后通过sendCommand发布到话题上
+1. 类之间的关系
 
-## 2.  manual_base
+```mermaid
+graph TB
+    A(manual_base) --派生--> B[dart_manual]
+    A(manual_base) --派生--> c[chassis_gimbal_manual]
+    c[chassis_gimbal_manual]--派生-->d[chassis_gimbal_shooter_manual]
+    c[chassis_gimbal_manual]--派生-->e[engineer_manual]
+    d[chassis_gimbal_shooter_manual]--派生-->f[chassis_gimbal_shooter_cover_manual]
+    f[chassis_gimbal_shooter_cover_manual]--派生-->g[balance_manual]
+    
+```
+
+
+
+2. 英雄manual为例，详解
+
+   - 大部分为manual_base中声明的虚函数
+
+   - 其余为写键位，本质是给msg中的变量赋值，然后通过sendCommand发布到话题上
+
+
+
+
+## 2. 代码详解
+
+### 1. manual_base
 
 1. run()：
    - 从串口读取裁判系统的数据并放到buffer中
    - 从buffer读取裁判系统的数据
-   - checkReferee() 检查裁判系统，实际是检查机器人血量
+   - checkReferee() 根据时间戳判断裁判系统是否在线、发布一些manual的信息到topic、更新一些事件
    - checkSwitch()：先检查遥控器开还是关并执行对应函数，然后检查right_switch的状态，然后根据state_是RC还是PC，执行对应的函数
    - sendCommand：发送指令(将msg发布到topic)
    - controller_manager_.update()：更新controller manager，会根据情况开启/关闭相应的控制器

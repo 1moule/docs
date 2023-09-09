@@ -12,56 +12,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c87b167-d30a-4f36-b569-eae499741a58" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/note/Adjust_chassis_power.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/DJI遥控校准.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/GM6020云台电机.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/IMU.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/IMU零飘补偿.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/Kill Gazebo.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/Linux下的can编程.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/PID控制器.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/URDF.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/Ubuntu20.04配置ssh.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/can-utils.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/can总线.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/chassis_controller.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/engineer_middleware.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/gimbal_controller.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/gpio_controller.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/manual.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/map_odom_baselink.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/orientation_controller.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/power_limit.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/rm_common.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/rm_dbus.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/rm_hw.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/robot_state_controller.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/ros control.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/shoot test.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/shooter_controller.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/socketcan.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/socketcan数据传输.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/study note.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/ubuntu20.04网线连接校园网.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/如何编写controller.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/宏.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/导航.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/底盘轮系的速度计算（全向轮）.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/底盘轮系的速度计算（舵轮）.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/底盘轮系的速度计算（麦克纳姆轮）.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/开发日常.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/手眼标定.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/控制器注册为插件.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/控制组学习清单.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/机器人比赛中常用的底盘轮系简介.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/气动发射.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/相机、imu联合标定.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/相机标定.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/编码器.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/自启.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/自瞄.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/踩坑日记.md" beforeDir="false" />
+    <list default="true" id="6c87b167-d30a-4f36-b569-eae499741a58" name="Changes" comment="Add some documentations, update some documentations and modify the file framework.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rm_manual/manual.md" beforeDir="false" afterPath="$PROJECT_DIR$/rm_manual/manual.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rm_track/rm_track.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,22 +28,25 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="2F7kcx1R7SpeW7kWDt5FwxDBGis" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/home/guanlin/docs"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/guanlin/docs&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -106,7 +63,11 @@
       <workItem from="1668911377385" duration="52000" />
       <workItem from="1670316893568" duration="433000" />
       <workItem from="1671171590515" duration="86000" />
-      <workItem from="1675308940206" duration="1000" />
+      <workItem from="1675308940206" duration="130000" />
+      <workItem from="1676771198081" duration="616000" />
+      <workItem from="1689600154315" duration="436000" />
+      <workItem from="1692258017278" duration="19000" />
+      <workItem from="1694250232861" duration="470000" />
     </task>
     <task id="LOCAL-00001" summary="Update some documentations.">
       <created>1663850860118</created>
@@ -157,7 +118,22 @@
       <option name="project" value="LOCAL" />
       <updated>1671171649859</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add some documentations, update some documentations and modify the file framework.">
+      <created>1675309036434</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675309036434</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update docs.">
+      <option name="closed" value="true" />
+      <created>1689600549153</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689600549153</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,6 +163,8 @@
     <MESSAGE value="Update some documentations." />
     <MESSAGE value="Add some documentations." />
     <MESSAGE value="Add some documentations and update some documentations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some documentations and update some documentations." />
+    <MESSAGE value="Update docs." />
+    <MESSAGE value="Add some documentations, update some documentations and modify the file framework." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some documentations, update some documentations and modify the file framework." />
   </component>
 </project>

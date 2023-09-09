@@ -1,3 +1,0 @@
-- **before reading**
-  - 在main.cpp中定义了rm_track节点的main函数，main函数中循环调用RmTrack::run()
-    - 遍历每一个目标
