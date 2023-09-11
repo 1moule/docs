@@ -12,11 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c87b167-d30a-4f36-b569-eae499741a58" name="Changes" comment="Add some documentations, update some documentations and modify the file framework.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rm_manual/manual.md" beforeDir="false" afterPath="$PROJECT_DIR$/rm_manual/manual.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rm_track/rm_track.md" beforeDir="false" />
-    </list>
+    <list default="true" id="6c87b167-d30a-4f36-b569-eae499741a58" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,9 +24,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2F7kcx1R7SpeW7kWDt5FwxDBGis" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -68,6 +64,7 @@
       <workItem from="1689600154315" duration="436000" />
       <workItem from="1692258017278" duration="19000" />
       <workItem from="1694250232861" duration="470000" />
+      <workItem from="1694254696378" duration="164000" />
     </task>
     <task id="LOCAL-00001" summary="Update some documentations.">
       <created>1663850860118</created>
@@ -133,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689600549153</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update docs.">
+      <option name="closed" value="true" />
+      <created>1694254756433</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1694254756434</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,8 +168,8 @@
     <MESSAGE value="Update some documentations." />
     <MESSAGE value="Add some documentations." />
     <MESSAGE value="Add some documentations and update some documentations." />
-    <MESSAGE value="Update docs." />
     <MESSAGE value="Add some documentations, update some documentations and modify the file framework." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some documentations, update some documentations and modify the file framework." />
+    <MESSAGE value="Update docs." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update docs." />
   </component>
 </project>
