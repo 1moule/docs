@@ -26,14 +26,6 @@ graph TB
 
 
 
-2. 英雄manual为例，详解
-
-   - 大部分为manual_base中声明的虚函数
-
-   - 其余为写键位，本质是给msg中的变量赋值，然后通过sendCommand发布到话题上
-
-
-
 ## 2. 代码详解
 
 ### 1. manual_base
