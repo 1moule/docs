@@ -80,7 +80,7 @@ but 震荡很大
 
 2. 低通滤波器可以加在微分调节的输出端 / PID相加之后的输出端。
 
-   ![image-20220117161752264](/home/chen/Desktop/typora-user-image/image-20220117161752264.png)
+   ![image-20220117161752264](../pictures/image-20220117161752264.png)
 
 3. 通常用一阶低通滤波器，也可以用其他低通滤波器
 
@@ -88,7 +88,7 @@ but 震荡很大
 
 1. 定义：在输出端进行微分，而不在输入端微分
 
-   ![image-20220117163042880](/home/chen/Desktop/typora-user-image/image-20220117163042880.png)
+   ![image-20220117163042880](../pictures/image-20220117163042880.png)
 
 2. 如果用户设定的值在不断变化的话，就会引入高频干扰，这个时候可以通过微分先行PID防止超调过大。
 3. 由公式可得，微分先行pid的微分部分跟设定值没有关系，只与测量值有关，所以在这里阶跃变化不会造成干扰。
@@ -97,9 +97,9 @@ but 震荡很大
 
 1. PID结构体
 
-   ![image-20220117170522914](/home/chen/Desktop/typora-user-image/image-20220117170522914.png)
+   ![image-20220117170522914](../pictures/image-20220117170522914.png)
 
 2. PID计算函数
 
-   ![image-20220117170601703](/home/chen/Desktop/typora-user-image/image-20220117170601703.png)
+   ![image-20220117170601703](../pictures/image-20220117170601703.png)
 

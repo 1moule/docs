@@ -38,30 +38,30 @@
 
 1. 配置CAN的总线通讯波特率： canconfig canX bitrate + 波特率
 
-![image-20220121013046091](/home/chen/Desktop/typora-user-image/image-20220121013046091.png)
+![image-20220121013046091](../pictures/image-20220121013046091.png)
 
 2. 开启 / 重启 / 关闭CAN总线
        canconfig canX start
        canconfig canX restart
        canconfig canX stop
 
-![image-20220121013137334](/home/chen/Desktop/typora-user-image/image-20220121013137334.png)
+![image-20220121013137334](/home/guanlin/docs/study_note/can-utils.assets/image-20220121013137334.png)
 
 3. 查看CAN总线状态：canecho canX
 
-![image-20220121013447642](/home/chen/Desktop/typora-user-image/image-20220121013447642.png)
+![image-20220121013447642](/home/guanlin/docs/study_note/can-utils.assets/image-20220121013447642.png)
 
 4. can设备发送信息：cansend canX –-identifier=ID + 数据
 
-![image-20220121013534995](/home/chen/Desktop/typora-user-image/image-20220121013534995.png)
+![image-20220121013534995](/home/guanlin/docs/study_note/can-utils.assets/image-20220121013534995.png)
 
 5. can设备接收数据：candump canX
 
-![image-20220121013547252](/home/chen/Desktop/typora-user-image/image-20220121013547252.png)
+![image-20220121013547252](../pictures/image-20220121013547252.png)
 
 6. 使用滤波器接收ID匹配的数据：candump canX –-filter=ID:mask
 
-![image-20220121013559152](/home/chen/Desktop/typora-user-image/image-20220121013559152.png)
+![image-20220121013559152](../pictures/image-20220121013559152.png)
 
 <mark>其实直接在apt装就行，缺依赖就从apt装</mark>
 

@@ -15,7 +15,7 @@
 3. 在内核空间通过各种函数、驱动这些东西把数据传给can控制器
 4. 通信时采用can_frame结构体将数据封装成帧。
 
-![image-20220120010755635](/home/guanlin/Desktop/typora-user-image/image-20220120010755635.png)
+![image-20220120010755635](../pictures/image-20220120010755635.png)
 
 ## 2. 接收流程
 
@@ -28,7 +28,7 @@
 
 5. 当中断产生后，会调度轮询机制，同时关闭所有的中断
 
-![image-20220119235951930](/home/guanlin/docs/study_note/socketcan数据传输.assets/image-20220119235951930.png)
+![image-20220119235951930](../pictures/image-20220119235951930.png)
 
 ## 3. NAPI机制
 
@@ -59,11 +59,11 @@
 
 这些状态依靠发送**错误计数**和**接收错误计数**来管理，根据计数值决定进入何种状态
 
-![image-20220120003041237](/home/chen/Desktop/typora-user-image/image-20220120003041237.png)
+![image-20220120003041237](../pictures/image-20220120003041237.png)
 
 ### 2. 三种状态的关系
 
-![image-20220120002345579](/home/chen/Desktop/typora-user-image/image-20220120002345579.png)
+![image-20220120002345579](../pictures/image-20220120002345579.png)
 
 ### 
 

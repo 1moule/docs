@@ -83,8 +83,6 @@ eg：<xacro:propetry name="wheel_radius" value=0.1 />；
 
 ## 4.标签
 
-##  ![](/home/chen/Pictures/2022-04-06 12-44-15 的屏幕截图.png)
-
 1. about tag "<safety_controller>"
 
    - eg：
@@ -112,8 +110,6 @@ eg：<xacro:propetry name="wheel_radius" value=0.1 />；
 2. <xacro:if > ... </ xacro:if>：相当于if判断
 
 ## 6. Transmission
-
-![](/home/chen/Pictures/2022-04-07 20-01-46 的屏幕截图.png)
 
 1. <transmisson name="xxx">:指定transmission的名字
 

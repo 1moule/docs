@@ -5,17 +5,17 @@
 1. ros中有很多应用，比如SLAM、Movelt这些，要把这些应用用到实际的机器人或者是仿真的机器人中，需要一个中间人，这个中间人就是ros control，ros control包含一系列控制器接口、传动装置接口、硬件接口、控制器工具箱等等。
 2. ros control的总体框架
 
-![image-20220202123005451](/home/guanlin/Desktop/typora-user-image/image-20220202123005451.png)
+![image-20220202123005451](../pictures/image-20220202123005451.png)
 
 ## 2. 特点
 
 1. controller不直接联系硬件，它通过向硬件抽象层请求资源，然后硬件抽象层直接联系硬件层，向controller提供资源（所以硬件抽象层负责硬件资源管理）
 
-![image-20220202124544911](/home/guanlin/Desktop/typora-user-image/image-20220202124544911.png)
+![image-20220202124544911](../pictures/image-20220202124544911.png)
 
 ## 3. 数据传输流程
 
-1. ![image-20220203184821085](/home/guanlin/Desktop/typora-user-image/image-20220203184821085.png)
+1. ![image-20220203184821085](../pictures/image-20220203184821085.png)
 
 2. （1）执行器（Actuator）的编码器等传感器数据被读取后，通过 Transmissions Interface 映射成关节 (Joint) 等机器人状态
 
@@ -29,7 +29,7 @@
 
 1. ros_controllers功能包提供了已有的一些controller
 
-![image-20220203150802758](/home/guanlin/Desktop/typora-user-image/image-20220203150802758.png)
+![image-20220203150802758](../pictures/image-20220203150802758.png)
 
 2. 可以根据需要自己创建controller，通过controller manager管理controller
 3. controller以动态库的形式被编译

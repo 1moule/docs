@@ -9,8 +9,8 @@
 
 1. 发送过程
 
-![image-20220120010755635](/home/chen/Desktop/typora-user-image/image-20220120010755635.png)
+![image-20220120010755635](../pictures/image-20220120010755635.png)
 
 2. 接收过程
 
-![image](/home/chen/Desktop/typora-user-image/2.png)
+![image](../pictures/2.png)

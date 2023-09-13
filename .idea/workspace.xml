@@ -12,7 +12,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c87b167-d30a-4f36-b569-eae499741a58" name="Changes" comment="" />
+    <list default="true" id="6c87b167-d30a-4f36-b569-eae499741a58" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,6 +67,7 @@
       <workItem from="1692258017278" duration="19000" />
       <workItem from="1694250232861" duration="470000" />
       <workItem from="1694254696378" duration="164000" />
+      <workItem from="1694431218513" duration="1040000" />
     </task>
     <task id="LOCAL-00001" summary="Update some documentations.">
       <created>1663850860118</created>
@@ -138,7 +141,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694254756434</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update docs of rm_manual.">
+      <option name="closed" value="true" />
+      <created>1694431245672</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1694431245672</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update docs of rm_manual.">
+      <option name="closed" value="true" />
+      <created>1694431655489</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1694431655489</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,6 +189,7 @@
     <MESSAGE value="Add some documentations and update some documentations." />
     <MESSAGE value="Add some documentations, update some documentations and modify the file framework." />
     <MESSAGE value="Update docs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update docs." />
+    <MESSAGE value="Update docs of rm_manual." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update docs of rm_manual." />
   </component>
 </project>
