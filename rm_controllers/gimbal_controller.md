@@ -123,13 +123,6 @@ graph TB
 
 #### 1. update()
 
-1. 流程：
-   - 获取gimbal的command以及data_track
-   - 获取tf转换关系
-   - 给底盘法速度指令
-   - 根据不同状态执行不同的动作函数，目标点在这设置
-   - movejoint
-
 1. ```c++
    void Controller::update(const ros::Time& time, const ros::Duration& period)
    {
