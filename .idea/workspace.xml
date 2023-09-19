@@ -12,7 +12,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c87b167-d30a-4f36-b569-eae499741a58" name="Changes" comment="Modify pictures' path." />
+    <list default="true" id="6c87b167-d30a-4f36-b569-eae499741a58" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,6 +69,8 @@
       <workItem from="1694254696378" duration="164000" />
       <workItem from="1694431218513" duration="1040000" />
       <workItem from="1694582196418" duration="122000" />
+      <workItem from="1694591518905" duration="86000" />
+      <workItem from="1694591611206" duration="86000" />
     </task>
     <task id="LOCAL-00001" summary="Update some documentations.">
       <created>1663850860118</created>
@@ -164,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694582235612</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update chassis controller docs.">
+      <option name="closed" value="true" />
+      <created>1694591543285</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1694591543285</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +210,7 @@
     <MESSAGE value="Update docs." />
     <MESSAGE value="Update docs of rm_manual." />
     <MESSAGE value="Modify pictures' path." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify pictures' path." />
+    <MESSAGE value="Update chassis controller docs." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update chassis controller docs." />
   </component>
 </project>
