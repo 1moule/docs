@@ -3,7 +3,7 @@
 1. 硬件部分
 
 - 电路制作了USB转GPIO的板子，通过USB转7pin的线可以插到PC上
-- 因为NUC只有IIC通信，所以需要制作一块GPIO的板子，让NUC具备操作GPIO的功能
+- 因为NUC上没有gpio外设，所以需要制作一块GPIO的板子，让NUC具备操作GPIO的功能
 
 2. 软件部分
 
