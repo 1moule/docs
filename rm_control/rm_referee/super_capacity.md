@@ -1,4 +1,4 @@
-**读取超电数据流程**
+*读取超电数据流程**
 
 - Referee::read()中调用super_capacitor_.read(rx_buffer_)
   - 遍历rx_buffer中每个字节，并调用dtpReceivedCallBack(k_i)
