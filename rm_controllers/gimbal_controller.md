@@ -22,6 +22,12 @@
   - rate：按照指定速度转动
   - track：自瞄
   - direct：给一个点，瞄到那个点
+- **控制方法**
+  - 云台的控制目前采用的是PD+前馈的方式
+  - 前馈补偿包括
+    - 按扰动前馈：摩擦力、重力
+    - 按输入前馈：theta_dot（期望位置微分，即期望速度）
+
 
 
 
@@ -563,29 +569,37 @@ void Controller::setDes(const ros::Time& time, double yaw_des, double pitch_des)
 
    - ##### feedForward()
 
-      - feedforward其实就是pitch受到的重力，通过向量叉乘计算得到
+      pitch为例
 
-      - 如果enable_gravity_compensation_为true说明有重力补偿，会通过同样的计算方法得到一个值，这个值可以看作是对抗重力的力，feedforward减去这个值后的结果，就是feedForward函数返回的值，也就是实际pitch会受到的力
-
-      - Eigen库
-
-        （1）Eigen是一个用头文件搭起来的线性代数库，没有二进制文件，使用时只要引入头文件
-
-        （2）Eigen是一个模板类，前三个参数为：数据类型，行，列
-
-        （3）eg:
-
-        ```c++
-        //声明一个 2*3 的 float 矩阵
-        Eigen::Matrix<float, 2, 3>; matrix_23;
-        ```
-
-        （4）Eigen通过typedef提供了许多内置的类型，不过底层都是(3)，比如：
-
-        ```c++
-        //声明一个 三维向量 
-        Eigen::Vector3d v_3d;
-        ```
+   ```c++
+   double Controller::feedForward(const ros::Time& time)
+   {
+     Eigen::Vector3d gravity(0, 0, -gravity_);	//定义一个3维向量，表示重力（即mg）
+     tf2::doTransform(gravity, gravity,
+                      robot_state_handle_.lookupTransform(ctrl_pitch_.joint_urdf_->child_link_name, "odom", time));  //将gravity向量转换到pitch坐标系，tf对于向量的坐标系转换只转换方向即只有旋转，对于Point会有平移+旋转
+     Eigen::Vector3d mass_origin(mass_origin_.x, 0, mass_origin_.z);	//质心坐标向量
+     
+     /*1.重力矩 = mglsin(theta)，l为pitch质心到pitch坐标系原点的距离，theta为竖直方向与 pitch质心与原点连线 的夹角
+       2.mass_origin.cross(gravity)，是质心位置向量与重力向量叉乘
+       3.由向量叉乘公式：mass_origin.cross(gravity) = |mass_origin|*|gravity|*sin(theta)
+       4.|mass_origin|就是pitch质心到pitch坐标系原点的距离l，|gravity|就是重力大小mg，3中theta等价与1中theta
+       5.综上，mass_origin.cross(gravity) = |mass_origin|*|gravity|*sin(theta) = mglsin(theta) = 重力矩
+     */
+       
+     double feedforward = -mass_origin.cross(gravity).y();
+     if (enable_gravity_compensation_)
+     {
+       Eigen::Vector3d gravity_compensation(0, 0, gravity_);
+       tf2::doTransform(gravity_compensation, gravity_compensation,
+                        robot_state_handle_.lookupTransform(ctrl_pitch_.joint_urdf_->child_link_name,
+                                                            ctrl_pitch_.joint_urdf_->parent_link_name, time));
+       feedforward -= mass_origin.cross(gravity_compensation).y();
+     }
+     return feedforward;
+   }
+   ```
+   
+   
 
 
 ---

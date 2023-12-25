@@ -14,6 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6c87b167-d30a-4f36-b569-eae499741a58" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vision/形态学处理.md" beforeDir="false" afterPath="$PROJECT_DIR$/vision/形态学处理.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vision/色彩分割.md" beforeDir="false" afterPath="$PROJECT_DIR$/vision/色彩分割.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +76,8 @@
       <workItem from="1695098352336" duration="179000" />
       <workItem from="1697799444282" duration="696000" />
       <workItem from="1697859095990" duration="24000" />
+      <workItem from="1697876672655" duration="646000" />
+      <workItem from="1697878640056" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="Update some documentations.">
       <created>1663850860118</created>
@@ -195,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697799489586</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Update some docs.">
+      <option name="closed" value="true" />
+      <created>1697876705305</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1697876705305</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,6 +244,7 @@
     <MESSAGE value="Update chassis controller docs." />
     <MESSAGE value="Update chassis controller and gimbal controller docs." />
     <MESSAGE value="Modify gpio.md and add calibration_controller.md." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify gpio.md and add calibration_controller.md." />
+    <MESSAGE value="Update some docs." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update some docs." />
   </component>
 </project>
